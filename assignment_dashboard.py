@@ -31,7 +31,7 @@ def save_manual(items: list) -> None:
     MANUAL_FILE.write_text(json.dumps(items, ensure_ascii=False, indent=2),
                            encoding="utf-8")
 
-# ───────────────────────── API (보내주신 방식 그대로 유지) ─────────────────────────
+# ───────────────────────── API ─────────────────────────
 def login(username: str, password: str) -> str:
     """Moodle 로그인 및 API 토큰 발급"""
     r = requests.post(
